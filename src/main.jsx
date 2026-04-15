@@ -3,10 +3,10 @@ import { createRoot } from 'react-dom/client'
 import './index.css'
 import { createBrowserRouter, RouterProvider } from 'react-router'
 import Root from './Root/Root';
-import Hero from './Root/HomePage/Hero';
-import Navbers from './Root/HomePage/Navbers';
-import Footer from './Root/HomePage/Footer';
-import YourFriends from './Root/HomePage/YourFriends';
+import TimeLine from './Root/HomePage/TimeLine';
+import IndividualFriends from './Root/HomePage/IndividualFriends';
+import Analytics from './Root/HomePage/Analytics';
+import Home from './Root/Component/Home';
 
 
 const router= createBrowserRouter([
@@ -14,14 +14,17 @@ const router= createBrowserRouter([
     path: '/',
     Component: Root,
     children: [
-      { index: true, Component: Navbers },
-      { path: 'hero', Component: Hero },
       {
-        path:'friends',
-        loader:()=>fetch('/public/Friends.json'),
-        Component:YourFriends
+        index:true,
+        Component:Home,
       },
-      { path: 'footer', Component: Footer }
+      {
+        path:'user/:id',
+        loader:()=>fetch('/public/friends.json'),
+        Component:IndividualFriends
+      },
+      { path: 'timeline', Component: TimeLine },
+      { path: 'anylytics', Component: Analytics },
     ]
   }
 ]);

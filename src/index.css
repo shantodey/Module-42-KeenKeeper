@@ -1,13 +1,32 @@
 @import "tailwindcss";
 @plugin "daisyui";
+@import url('https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap');
 
-
-body{
+body {
   background-color: #f8fafc;
+  font-family: "Geist", sans-serif;
 }
 
 
-.PrimaryButton{
+.PrimaryButton {
   background-color: #244d3f;
   color: white;
+}
+
+.activeButton {
+  background-color: #244d3f;
+  color: white;
+  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    border: 0 solid;
+}
+
+.unactiveButton {
+  background-color: transparent;
+  color: black;
+  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    border: 0 solid;
 }
