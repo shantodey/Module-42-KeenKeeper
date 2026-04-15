@@ -3,6 +3,7 @@ import Navbers from './HomePage/Navbers';
 import Hero from './HomePage/Hero';
 import Stats from './HomePage/Stats';
 import Footer from './HomePage/Footer';
+import YourFriends from './HomePage/YourFriends';
 
 const Root = () => {
     return (
@@ -10,6 +11,7 @@ const Root = () => {
             <Navbers />
             <Hero />
             <Stats/>
+            <YourFriends/>
             <Footer/>
         </>
     );
