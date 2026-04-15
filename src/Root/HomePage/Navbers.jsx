@@ -1,7 +1,7 @@
-import React from 'react';
 import { NavLink } from 'react-router-dom';
-
-const Navbar = () => {
+import PrimaryButton from '../Component/PrimaryButton';
+// import { RiHome2Line,CiClock2,TfiStatsUp  } from "react-icons/ri";
+const Navbers = () => {
     return (
         <div className="navbar bg-base-100 shadow-sm">
             <div className="navbar-start">
@@ -12,26 +12,23 @@ const Navbar = () => {
                     <ul
                         tabIndex="-1"
                         className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
-                        <li><a>Item 1</a></li>
-                        <li>
-                            <a>Parent</a>
-                            <ul className="p-2">
-                                <li><a>Submenu 1</a></li>
-                                <li><a>Submenu 2</a></li>
-                            </ul>
-                        </li>
-                        <li><a>Item 3</a></li>
+                        <li><a>Home</a></li>
+                        <li><a>Timeline</a></li>
+                        <li><a>Stats</a></li>
                     </ul>
                 </div>
                 <a className="btn btn-ghost text-xl">KeenKeeper</a>
             </div>
             <div className="navbar-end">
-                <NavLink className="btn">Home</NavLink>
-                <NavLink className="btn">Timeline</NavLink>
-                <NavLink className="btn">Stats</NavLink>
+                <NavLink ><PrimaryButton>Home</PrimaryButton></NavLink>
+                <NavLink ><PrimaryButton>Timeline</PrimaryButton></NavLink>
+                <NavLink ><PrimaryButton>Stats</PrimaryButton></NavLink>
+                {/* <RiHome2Line />
+                <CiClock2 />
+                <TfiStatsUp /> */}
             </div>
         </div>
     );
 };
 
-export default Navbar;
+export default Navbers;

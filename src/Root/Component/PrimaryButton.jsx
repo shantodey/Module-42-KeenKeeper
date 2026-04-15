@@ -1,7 +1,7 @@
 
-const PrimaryButton = ({children,cn}) => {
+const PrimaryButton = ({children}) => {
     return (
-        <button className={cn}>
+        <button className="btn PrimaryButton">
             {children}
         </button>
     );

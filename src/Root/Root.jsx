@@ -1,9 +1,17 @@
 import React from 'react';
-import Navbar from './HomePage/Navbar/Navbar';
+import Navbers from './HomePage/Navbers';
+import Hero from './HomePage/Hero';
+import Stats from './HomePage/Stats';
+import Footer from './HomePage/Footer';
 
 const Root = () => {
     return (
-        <Navbar/>
+        <>
+            <Navbers />
+            <Hero />
+            <Stats/>
+            <Footer/>
+        </>
     );
 };
 

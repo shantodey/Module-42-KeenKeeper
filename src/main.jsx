@@ -2,8 +2,10 @@ import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import './index.css'
 import { createBrowserRouter, RouterProvider } from 'react-router'
-import Navbar from './Root/HomePage/Navbar/Navbar';
 import Root from './Root/Root';
+import Hero from './Root/HomePage/Hero';
+import Navbers from './Root/HomePage/Navbers';
+import Footer from './Root/HomePage/Footer';
 
 
 const router= createBrowserRouter([
@@ -11,9 +13,12 @@ const router= createBrowserRouter([
     path: '/',
     Component: Root,
     children: [
-      { index: true, Component: Navbar },
-      // { path: 'phone', Component: Phone },
-      // { path: 'laptop', Component: Laptop }
+      { index: true, Component: Navbers },
+      { path: 'hero', Component: Hero },
+      {
+        path
+      }
+      { path: 'footer', Component: Footer }
     ]
   }
 ]);
