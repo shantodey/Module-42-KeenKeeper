@@ -1,0 +1,98 @@
+[
+  {
+    "id": 1,
+    "name": "Maya Patel",
+    "picture": "https://randomuser.me/api/portraits/women/44.jpg",
+    "email": "maya.patel@gmail.com",
+    "days_since_contact": 18,
+    "status": "overdue",
+    "tags": ["college", "close friend", "travel buddy"],
+    "bio": "Met freshman year of college. We backpacked through Southeast Asia after graduation and still plan trips together every summer.",
+    "goal": 14,
+    "next_due_date": "2026-04-08"
+  },
+  {
+    "id": 2,
+    "name": "Carlos Rivera",
+    "picture": "https://randomuser.me/api/portraits/men/32.jpg",
+    "email": "carlos.r@outlook.com",
+    "days_since_contact": 6,
+    "status": "on-track",
+    "tags": ["work", "gym", "mentor"],
+    "bio": "Former manager who became a close friend. We still meet for coffee every few weeks and he's been a huge career influence on me.",
+    "goal": 14,
+    "next_due_date": "2026-04-21"
+  },
+  {
+    "id": 3,
+    "name": "Sophie Andersen",
+    "picture": "https://randomuser.me/api/portraits/women/68.jpg",
+    "email": "sandersen@protonmail.com",
+    "days_since_contact": 42,
+    "status": "overdue",
+    "tags": ["childhood", "family friend"],
+    "bio": "We grew up on the same street and went to the same schools for 12 years. Life pulled us to different cities but she still feels like family.",
+    "goal": 30,
+    "next_due_date": "2026-03-24"
+  },
+  {
+    "id": 4,
+    "name": "James Okonkwo",
+    "picture": "https://randomuser.me/api/portraits/men/75.jpg",
+    "email": "j.okonkwo@gmail.com",
+    "days_since_contact": 9,
+    "status": "almost due",
+    "tags": ["college", "roommate", "close friend"],
+    "bio": "My roommate for three years in college. We basically raised each other through our early twenties. Now he lives across town and we grab dinner monthly.",
+    "goal": 10,
+    "next_due_date": "2026-04-16"
+  },
+  {
+    "id": 5,
+    "name": "Leila Nasser",
+    "picture": "https://randomuser.me/api/portraits/women/21.jpg",
+    "email": "leila.nasser@yahoo.com",
+    "days_since_contact": 3,
+    "status": "on-track",
+    "tags": ["book club", "neighbor", "close friend"],
+    "bio": "Met through our neighborhood book club two years ago. We ended up having the same taste in everything — books, restaurants, bad reality TV.",
+    "goal": 7,
+    "next_due_date": "2026-04-18"
+  },
+  {
+    "id": 6,
+    "name": "Tom Bergström",
+    "picture": "https://randomuser.me/api/portraits/men/11.jpg",
+    "email": "tom.bergstrom@hey.com",
+    "days_since_contact": 27,
+    "status": "almost due",
+    "tags": ["work", "conference friend", "tech"],
+    "bio": "Met at a developer conference in Berlin. We keep up over Slack and occasionally collaborate on side projects. Smart guy with great taste in open source tools.",
+    "goal": 30,
+    "next_due_date": "2026-04-20"
+  },
+  {
+    "id": 7,
+    "name": "Priya Subramaniam",
+    "picture": "https://randomuser.me/api/portraits/women/53.jpg",
+    "email": "priya.sub@gmail.com",
+    "days_since_contact": 60,
+    "status": "overdue",
+    "tags": ["college", "study group", "long-distance"],
+    "bio": "Study partner through the toughest courses in my degree. She moved to Toronto for grad school and our calls have gotten too infrequent. Need to fix that.",
+    "goal": 30,
+    "next_due_date": "2026-03-05"
+  },
+  {
+    "id": 8,
+    "name": "Derek Holloway",
+    "picture": "https://randomuser.me/api/portraits/men/59.jpg",
+    "email": "derek.holloway@fastmail.com",
+    "days_since_contact": 2,
+    "status": "on-track",
+    "tags": ["close friend", "gym", "weekend crew"],
+    "bio": "Met through a mutual friend at a barbecue five years ago and immediately clicked. We play basketball on weekends and he's the person I call when I need honest advice.",
+    "goal": 7,
+    "next_due_date": "2026-04-19"
+  }
+]
