@@ -1,4 +1,4 @@
-import { NavLink } from 'react-router-dom';
+import { NavLink, Outlet } from 'react-router-dom';
 import PrimaryButton from '../Component/PrimaryButton';
 import { RiHome2Line } from 'react-icons/ri';
 import { TfiStatsUp } from 'react-icons/tfi';
@@ -24,12 +24,9 @@ const Navbers = () => {
                     <a className="btn btn-ghost text-xl">KeenKeeper</a>
                 </div>
                 <div className="navbar-end">
-                    <NavLink className={({isActive})=>isActive? 'activeButton':'unactiveButton'} >Home</NavLink>
-                    <NavLink to="/timeline"><PrimaryButton>Timeline</PrimaryButton></NavLink>
-                    <NavLink to='anylytics'><PrimaryButton>Stats</PrimaryButton></NavLink>
-                    <RiHome2Line/>
-                    <CiClock1/>
-                    <TfiStatsUp/>
+                    <NavLink className={({isActive})=>isActive? 'activeButton btn':'unactiveButton btn'} > <RiHome2Line/>Home</NavLink>
+                    <NavLink className={({isActive})=>isActive? 'activeButton btn':'unactiveButton btn'}  to="/timeline"><CiClock1/>Timeline</NavLink>
+                    <NavLink className={({isActive})=>isActive? 'activeButton btn':'unactiveButton btn'}  to='anylytics'><TfiStatsUp/>Stats</NavLink>
                 </div>
             </div>
             

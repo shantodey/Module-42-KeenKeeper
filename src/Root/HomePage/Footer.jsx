@@ -1,5 +1,6 @@
 import React from 'react';
-// import { FaInstagram,FaFacebookF,FaXTwitter  } from "react-icons/fa";
+import { FaFacebookF, FaInstagram } from 'react-icons/fa';
+import { FaXTwitter } from 'react-icons/fa6';
 
 const Footer = () => {
     return (
@@ -14,13 +15,13 @@ const Footer = () => {
 
                     <div className="flex justify-center gap-4 mb-10">
                         <a className="bg-white h-10 w-10 flex justify-center items-center ">
-                            {/* <FaInstagram /> */}
+                            <FaInstagram />
                         </a>
                         <a className="bg-white h-10 w-10 flex justify-center items-center">
-                            {/* <FaFacebookF /> */}
+                            <FaFacebookF />
                         </a>
                         <a className="bg-white h-10 w-10 flex justify-center items-center">
-                           {/* <FaXTwitter /> */}
+                           <FaXTwitter />
                         </a>
 
                     </div>

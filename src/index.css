@@ -16,17 +16,9 @@ body {
 .activeButton {
   background-color: #244d3f;
   color: white;
-  box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    border: 0 solid;
 }
 
 .unactiveButton {
   background-color: transparent;
   color: black;
-  box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    border: 0 solid;
 }
