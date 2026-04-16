@@ -1,16 +1,72 @@
-# React + Vite
+### Assignment 07 — Programming Hero
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# KeenKeeper
 
-Currently, two official plugins are available:
+> Your personal shelf for meaningful connections — browse, tend, and nurture the relationships that matter most.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+---
 
-## React Compiler
+## 📌 What is KeenKeeper?
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+KeenKeeper is a relationship management app designed for people who want to stay genuinely connected with the people they care about.
 
-## Expanding the ESLint configuration
+It helps you:
+- Track your interactions
+- Set meaningful connection goals
+- Get timely reminders before relationships fade
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Think of it as a **digital memory + connection assistant**.
+
+---
+
+## 🛠️ Tech Stack
+
+- **Next.js (App Router)** — SSR & modern routing
+- **React** — Component-based UI
+- **Tailwind CSS** — Utility-first styling
+- **DaisyUI** — Prebuilt UI components
+- **React Hot Toast** — Clean notification system
+- **Recharts** — Data visualization & analytics
+- **Context API** — Global state management
+
+---
+
+## ✨ Key Features
+
+### 👥 Friend Tracking
+Keep a curated list of your closest connections.  
+Each friend includes:
+- Tags (Work, Personal, etc.)
+- Notes
+- Relationship status
+
+So you always know where things stand.
+
+---
+
+### 📅 Interaction Timeline
+Log every interaction with a single click:
+- 📞 Call
+- 💬 Text
+- 🎥 Video
+
+Your history is:
+- Sorted
+- Filterable
+- Easy to scan
+
+Nothing slips through the cracks.
+
+---
+
+### 🎯 Relationship Goals & Reminders
+Set a contact frequency goal for each friend.
+
+KeenKeeper will:
+- Track days since last contact
+- Highlight overdue relationships
+- Show next due date
+
+So you never lose touch unintentionally.
+
+---
