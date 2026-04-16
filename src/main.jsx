@@ -20,7 +20,7 @@ const router= createBrowserRouter([
       },
       {
         path:'user/:id',
-        loader:()=>fetch('/public/friends.json'),
+        loader:()=>fetch('/friends.json'),
         Component:IndividualFriends
       },
       { path: 'timeline', Component: TimeLine },
