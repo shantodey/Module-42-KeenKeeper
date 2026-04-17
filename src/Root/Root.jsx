@@ -2,6 +2,7 @@ import { useState } from 'react';
 import Navbers from './HomePage/Navbers';
 import Footer from './HomePage/Footer';
 import { Outlet } from 'react-router';
+import { ToastContainer } from 'react-toastify';
 
 const Root = () => {
     const [selectedActions, setSelectedActions] = useState([]);
@@ -15,6 +16,7 @@ const Root = () => {
             <Navbers />
             <Outlet context={{ selectedActions, handleAddAction, setSelectedActions }} />
             <Footer />
+                  <ToastContainer />
         </>
     );
 };
