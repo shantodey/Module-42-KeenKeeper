@@ -3,7 +3,7 @@ import Hero from '../HomePage/Hero';
 import Stats from '../HomePage/Stats';
 import YourFriends from '../HomePage/YourFriends';
 const fetchDataFromApi = () => {
-    return fetch('/friends.json')
+    return fetch('./friends.json')
         .then((res) => res.json())
 }
 const getData = fetchDataFromApi()
