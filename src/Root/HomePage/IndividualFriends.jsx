@@ -1,4 +1,5 @@
 
+import { useState } from 'react';
 import { AiOutlineDelete } from 'react-icons/ai';
 import { BsChatSquareText } from 'react-icons/bs';
 import { CiPhone } from 'react-icons/ci';
@@ -11,9 +12,12 @@ const IndividualFriends = () => {
   const { id } = useParams()
   const userdata = useLoaderData()
   const user = userdata.find((i) => i.id === Number(id))
-  console.log(user);
-
-
+  const [selectedActions, setSelectedActions] = useState([]);
+  const handleAddAction = (action) => {
+    setSelectedActions((prev) => [...prev, action]);
+  };
+  console.log(selectedActions);
+  
   return (
     <div className='container mx-auto p-6'>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -74,8 +78,6 @@ const IndividualFriends = () => {
               <p className="text-sm text-gray-500 font-medium mt-1">Next Due</p>
             </div>
           </div>
-
-          {/* Relationship Goal Card */}
           <div className="card bg-white shadow-sm border border-gray-100 p-6 flex flex-row justify-between items-center rounded-lg">
             <div>
               <h3 className="font-bold text-gray-800">Relationship Goal</h3>
@@ -86,19 +88,18 @@ const IndividualFriends = () => {
             <button className="px-4 py-1 border rounded text-sm font-medium hover:bg-gray-50">Edit</button>
           </div>
 
-          {/* Quick Check-In Card */}
           <div className="card bg-white shadow-sm border border-gray-100 p-6 rounded-lg">
             <h3 className="font-bold text-gray-800 mb-6">Quick Check-In</h3>
             <div className="grid grid-cols-3 gap-4">
-              <button className="flex flex-col items-center justify-center gap-2 p-4 border rounded-md hover:bg-gray-50 transition-colors h-28">
+              <button onClick={() => handleAddAction('Call')} className="flex flex-col items-center justify-center gap-2 p-4 border rounded-md hover:bg-gray-50 transition-colors h-28">
                 <CiPhone className="text-3xl" />
                 <span className="text-sm font-medium">Call</span>
               </button>
-              <button className="flex flex-col items-center justify-center gap-2 p-4 border rounded-md hover:bg-gray-50 transition-colors h-28">
+              <button onClick={() => handleAddAction('Text')} className="flex flex-col items-center justify-center gap-2 p-4 border rounded-md hover:bg-gray-50 transition-colors h-28">
                 <BsChatSquareText className="text-2xl" />
                 <span className="text-sm font-medium">Text</span>
               </button>
-              <button className="flex flex-col items-center justify-center gap-2 p-4 border rounded-md hover:bg-gray-50 transition-colors h-28">
+              <button onClick={() => handleAddAction('Video')} className="flex flex-col items-center justify-center gap-2 p-4 border rounded-md hover:bg-gray-50 transition-colors h-28">
                 <PiVideoCamera className="text-3xl" />
                 <span className="text-sm font-medium">Video</span>
               </button>

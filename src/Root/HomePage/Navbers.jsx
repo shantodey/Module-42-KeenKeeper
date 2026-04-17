@@ -1,5 +1,4 @@
 import { NavLink, Outlet } from 'react-router-dom';
-import PrimaryButton from '../Component/PrimaryButton';
 import { RiHome2Line } from 'react-icons/ri';
 import { TfiStatsUp } from 'react-icons/tfi';
 import { CiClock1 } from 'react-icons/ci';

@@ -1,6 +1,6 @@
 import React from 'react';
-import { FaFacebookF, FaInstagram } from 'react-icons/fa';
-import { FaXTwitter } from 'react-icons/fa6';
+import { BsInstagram, BsTwitterX } from 'react-icons/bs';
+import { TfiFacebook } from 'react-icons/tfi';
 
 const Footer = () => {
     return (
@@ -14,19 +14,18 @@ const Footer = () => {
                     <p className="mb-4 text-sm">Social Links</p>
 
                     <div className="flex justify-center gap-4 mb-10">
-                        <a className="bg-white h-10 w-10 flex justify-center items-center ">
-                            <FaInstagram />
+                        <a className="tooltip tooltip-bottom  w-10 h-10 rounded-full bg-white   flex items-center justify-center text-black hover:bg-[#244d3f] hover:text-white border transition-all duration-100 cursor-pointer hover:border-white/30 hover:-translate-y-1">
+                            <BsInstagram />
                         </a>
-                        <a className="bg-white h-10 w-10 flex justify-center items-center">
-                            <FaFacebookF />
+                        <a className="tooltip tooltip-bottom  w-10 h-10 rounded-full bg-white   flex items-center justify-center text-black hover:bg-[#244d3f] hover:text-white border transition-all duration-100 cursor-pointer hover:border-white/30 hover:-translate-y-1">
+                            <TfiFacebook />
                         </a>
-                        <a className="bg-white h-10 w-10 flex justify-center items-center">
-                           <FaXTwitter />
+                        <a className="tooltip tooltip-bottom  w-10 h-10 rounded-full bg-white   flex items-center justify-center text-black hover:bg-[#244d3f] hover:text-white border transition-all duration-100 cursor-pointer hover:border-white/30 hover:-translate-y-1">
+                          <BsTwitterX />
                         </a>
 
                     </div>
-                    <span className='border-2 w-full'></span>
-                    <div className="flex flex-col md:flex-row justify-between items-center text-xs text-gray-300 gap-4">
+                    <div className="border-t  mx-auto border-[#225946] mt-10 pt-10 max-w-278 flex items-center justify-between flex-col md:flex-row gap-4">
                         <p>© {new Date().getFullYear()} KeenKeeper. All rights reserved.</p>
 
                         <div className="flex gap-6">
