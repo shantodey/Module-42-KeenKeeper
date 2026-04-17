@@ -1,21 +1,17 @@
 
-import { useState } from 'react';
 import { AiOutlineDelete } from 'react-icons/ai';
 import { BsChatSquareText } from 'react-icons/bs';
 import { CiPhone } from 'react-icons/ci';
 import { FaRegBell } from 'react-icons/fa';
 import { LuCalendarMinus2 } from 'react-icons/lu';
 import { PiVideoCamera } from 'react-icons/pi';
-import { useLoaderData, useParams } from 'react-router';
+import { useLoaderData, useParams, useOutletContext } from 'react-router';
 
 const IndividualFriends = () => {
   const { id } = useParams()
   const userdata = useLoaderData()
   const user = userdata.find((i) => i.id === Number(id))
-  const [selectedActions, setSelectedActions] = useState([]);
-  const handleAddAction = (action) => {
-    setSelectedActions((prev) => [...prev, action]);
-  };
+  const { handleAddAction, selectedActions } = useOutletContext();
   console.log(selectedActions);
   
   return (
