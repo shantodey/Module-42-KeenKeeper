@@ -110,23 +110,25 @@ const IndividualFriends = () => {
             <div className="card bg-white shadow-sm border border-gray-100 p-6 rounded-lg">
               <h3 className="font-bold text-gray-800 mb-6">Quick Check-In</h3>
               <div className="grid grid-cols-3 gap-4">
-                <button onClick={() => { onButtonClick('Call'); notify('Call'); }} className="flex flex-col items-center justify-center gap-2 p-4 border rounded-md hover:bg-gray-50 transition-colors h-28">
+                <button onClick={() => { onButtonClick('Call'); notify('Call'); }}
+                  className="flex flex-col items-center justify-center gap-2 p-4 border rounded-md hover:bg-gray-50 h-28 transition-all duration-300 hover:border-[#244D3F] hover:-translate-y-1 hover:shadow-lg">
                   <CiPhone className="text-3xl" />
                   <span className="text-sm font-medium">Call</span>
                 </button>
 
-                <button onClick={() => { onButtonClick('Text'); notify('Text'); }} className="flex flex-col items-center justify-center gap-2 p-4 border rounded-md hover:bg-gray-50 transition-colors h-28">
+                <button onClick={() => { onButtonClick('Text'); notify('Text'); }}
+                  className="flex flex-col items-center justify-center gap-2 p-4 border rounded-md hover:bg-gray-50 h-28 transition-all duration-300 hover:border-[#244D3F] hover:-translate-y-1 hover:shadow-lg">
                   <BsChatSquareText className="text-2xl" />
                   <span className="text-sm font-medium">Text</span>
                 </button>
 
-                <button onClick={() => { onButtonClick('Video'); notify('Video'); }} className="flex flex-col items-center justify-center gap-2 p-4 border rounded-md hover:bg-gray-50 transition-colors h-28">
+                <button onClick={() => { onButtonClick('Video'); notify('Video'); }}
+                  className="flex flex-col items-center justify-center gap-2 p-4 border rounded-md hover:bg-gray-50 h-28 transition-all duration-300 hover:border-[#244D3F] hover:-translate-y-1 hover:shadow-lg">
                   <PiVideoCamera className="text-3xl" />
                   <span className="text-sm font-medium">Video</span>
                 </button>
               </div>
             </div>
-
           </div>
         </div>
       </div>
