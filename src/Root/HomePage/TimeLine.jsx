@@ -26,12 +26,12 @@ const TimeLine = () => {
                 <select 
                     value={filter} 
                     onChange={(e) => setFilter(e.target.value)} 
-                    className="select border-[#244d3f] mb-6"
+                    className="select bg-transparent border-[#244d3f] mb-6"
                 >
-                    <option value="All">All Interactions</option>
-                    <option value="Call">Call</option>
-                    <option value="Text">Text</option>
-                    <option value="Video">Video</option>
+                    <option className='bg-white' value="All">All Interactions</option>
+                    <option className='bg-white' value="Call">Call</option>
+                    <option className='bg-white' value="Text">Text</option>
+                    <option className='bg-white' value="Video">Video</option>
                 </select>
 
                 <div className='flex flex-col gap-4'>
