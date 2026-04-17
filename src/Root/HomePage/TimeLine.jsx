@@ -1,36 +1,64 @@
 import React from 'react';
-import { RiDeleteBin6Line } from 'react-icons/ri';
+import { RiDeleteBin2Line } from 'react-icons/ri';
 import { useOutletContext } from 'react-router';
+import NoResutls from '../../assets/No_results.png'
+import Call from '../../assets/call.png'
+import Text from '../../assets/text.png'
+import Video from '../../assets/video.png'
+
 
 const TimeLine = () => {
-    const { selectedActions } = useOutletContext();
-
+    const { selectedActions, setSelectedActions } = useOutletContext();
     return (
-        <section>
-            <div className='container mx-auto'>
+        <section className="py-10">
+            <div className='my-10 max-w-278 mx-auto px-4 '>
                 <div className='flex items-center justify-between mb-6 '>
-                    <h1 className='text-4xl md:text-5xl font-bold '>Timeline </h1>
+                    <h1 className='text-4xl font-bold mb-8'>Timeline</h1>
                     <div className='flex items-center gap-4'>
-                        <h1 className='font-medium text-[#244d3f] text-lg'> Total: {selectedActions.length}</h1>
-                        <button className=' btn btn-error h-8 w-10 p-2 btn-outline hover:text-white tooltip tooltip-bottom tooltip-error'>
-                            <RiDeleteBin6Line />
+                        <h1 className='font-medium text-[#244d3f] text-lg'>Total:{selectedActions.length}</h1>
+                        <button onClick={() => setSelectedActions([])} className=' btn btn-error h-8 w-10 p-2 btn-outline hover:text-white tooltip tooltip-bottom tooltip-error'>
+                            <RiDeleteBin2Line />
                         </button>
                     </div>
                 </div>
-                {selectedActions.length ? (
-                    <div className='rounded-lg border border-gray-100 bg-white p-6 shadow-sm'>
-                        <h2 className='text-xl font-semibold mb-4'>Recent Actions</h2>
-                        <div className='grid grid-cols-1 md:grid-cols-3 gap-3'>
-                            {selectedActions.map((action, index) => (
-                                <div key={`${action}-${index}`} className='rounded-lg border border-gray-200 bg-slate-50 p-4 text-center'>
-                                    {action}
+
+                <div className='flex flex-col gap-4'>
+
+                    {
+                        selectedActions.length === 0 ? (
+                            <div className='flex flex-col items-center justify-center py-16 text-gray-400'>
+                                <img src={NoResutls} alt="" />
+                            </div>
+                        ) : (
+                            selectedActions.map((item) => (
+                                <div
+                                    key={item.id}
+                                    className='flex items-center gap-4 border border-gray-100 rounded-lg p-5 bg-white shadow-sm'
+                                >
+                                    <div className="p-3 bg-gray-50 rounded-full text-2xl text-gray-600">
+                                        {item.method === 'Call' && (
+                                            <img src={Call} alt="Call" className="w-8 h-8 object-contain" />
+                                        )}
+                                        {item.method === 'Text' && (
+                                            <img src={Text} alt="Text" className="w-8 h-8 object-contain" />
+                                        )}
+                                        {item.method === 'Video' && (
+                                            <img src={Video} alt="Video" className="w-8 h-8 object-contain" />
+                                        )}
+                                    </div>
+
+                                    <div>
+                                        <p className="text-gray-800 text-lg">
+                                            <span className="font-bold text-teal-800">{item.method}</span> with {item.contactName}
+                                        </p>
+                                        <p className="text-sm text-gray-400 font-medium">{item.date}</p>
+                                    </div>
                                 </div>
-                            ))}
-                        </div>
-                    </div>
-                ) : (
-                    <p className='text-sm text-gray-500'>No actions recorded yet. Go to a friend and add a quick check-in action.</p>
-                )}
+                            ))
+                        )
+                    }
+
+                </div>
             </div>
         </section>
     );

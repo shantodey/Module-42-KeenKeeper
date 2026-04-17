@@ -5,17 +5,15 @@ import { Outlet } from 'react-router';
 
 const Root = () => {
     const [selectedActions, setSelectedActions] = useState([]);
-
-    const handleAddAction = (action) => {
-        setSelectedActions((prev) => [...prev, action]);
+    const handleAddAction = (actionObject) => {
+        setSelectedActions((prev) => [actionObject, ...prev]);
     };
 
     return (
         <>
             <Navbers />
-            <Outlet context={{ selectedActions, handleAddAction }} />
+            <Outlet context={{ selectedActions, handleAddAction, setSelectedActions }} />
             <Footer />
-
         </>
     );
 };

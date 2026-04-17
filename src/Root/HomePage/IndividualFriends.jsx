@@ -12,7 +12,17 @@ const IndividualFriends = () => {
   const userdata = useLoaderData()
   const user = userdata.find((i) => i.id === Number(id))
   const { handleAddAction, selectedActions } = useOutletContext();
-  console.log(selectedActions);
+  const onButtonClick = (methodType) => {
+    const newLog = {
+      id: Date.now(),
+      method: methodType,
+      contactName: user.name,
+      date: new Date().toLocaleString('en-US', { 
+        month: 'short', day: 'numeric', hour: '2-digit', minute: '2-digit' 
+      })
+    };
+    handleAddAction(newLog);
+  };
   
   return (
     <div className='container mx-auto p-6'>
@@ -87,15 +97,15 @@ const IndividualFriends = () => {
           <div className="card bg-white shadow-sm border border-gray-100 p-6 rounded-lg">
             <h3 className="font-bold text-gray-800 mb-6">Quick Check-In</h3>
             <div className="grid grid-cols-3 gap-4">
-              <button onClick={() => handleAddAction('Call')} className="flex flex-col items-center justify-center gap-2 p-4 border rounded-md hover:bg-gray-50 transition-colors h-28">
+              <button onClick={() => onButtonClick('Call')} className="flex flex-col items-center justify-center gap-2 p-4 border rounded-md hover:bg-gray-50 transition-colors h-28">
                 <CiPhone className="text-3xl" />
                 <span className="text-sm font-medium">Call</span>
               </button>
-              <button onClick={() => handleAddAction('Text')} className="flex flex-col items-center justify-center gap-2 p-4 border rounded-md hover:bg-gray-50 transition-colors h-28">
+              <button onClick={() => onButtonClick('Text')} className="flex flex-col items-center justify-center gap-2 p-4 border rounded-md hover:bg-gray-50 transition-colors h-28">
                 <BsChatSquareText className="text-2xl" />
                 <span className="text-sm font-medium">Text</span>
               </button>
-              <button onClick={() => handleAddAction('Video')} className="flex flex-col items-center justify-center gap-2 p-4 border rounded-md hover:bg-gray-50 transition-colors h-28">
+              <button onClick={() => onButtonClick('Video')} className="flex flex-col items-center justify-center gap-2 p-4 border rounded-md hover:bg-gray-50 transition-colors h-28">
                 <PiVideoCamera className="text-3xl" />
                 <span className="text-sm font-medium">Video</span>
               </button>
