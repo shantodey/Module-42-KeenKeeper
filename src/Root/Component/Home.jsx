@@ -16,6 +16,7 @@ const Home = () => {
             <Suspense fallback={<span>loading....</span>}>
                 <YourFriends getData={getData} />
             </Suspense>
+
         </>
     );
 };

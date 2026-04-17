@@ -9,6 +9,7 @@ const Root = () => {
         setSelectedActions((prev) => [actionObject, ...prev]);
     };
 
+    
     return (
         <>
             <Navbers />

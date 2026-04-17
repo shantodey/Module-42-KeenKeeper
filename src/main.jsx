@@ -7,6 +7,7 @@ import TimeLine from './Root/HomePage/TimeLine';
 import IndividualFriends from './Root/HomePage/IndividualFriends';
 import Analytics from './Root/HomePage/Analytics';
 import Home from './Root/Component/Home';
+import Htm404 from './Root/Component/Htm404';
 
 
 const router= createBrowserRouter([
@@ -29,7 +30,7 @@ const router= createBrowserRouter([
   }
 ,{
   path:'*',
-  element:<p>dfsdfsdfsdf</p>
+  Component:Htm404
 }
 ]);
 
