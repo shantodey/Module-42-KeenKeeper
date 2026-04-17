@@ -27,6 +27,10 @@ const router= createBrowserRouter([
       { path: 'anylytics', Component: Analytics },
     ]
   }
+,{
+  path:'*',
+  element:<p>dfsdfsdfsdf</p>
+}
 ]);
 
 createRoot(document.getElementById('root')).render(
